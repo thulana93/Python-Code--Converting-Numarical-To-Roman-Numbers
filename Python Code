@@ -1,0 +1,17 @@
+# Convert Numaral to Roman
+def int_Roman(num):
+    m = ['', 'M', 'MM', 'MMM', 'MMMM', 'MMMMM', 'MMMMMM', 'MMMMMMM', 'MMMMMMMM','MMMMMMMMM']
+    c = ["", "C", "CC", "CCC", "CD", "D","DC", "DCC", "DCCC", "CM "]
+    x = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"]
+    i = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
+    
+    thausands = m[num//1000]
+    hundreds = c[(num%1000)//100]
+    tens = x[(num%100)//10]
+    ones =i[num%10]
+        
+    R_number = thausands+hundreds+tens+ones
+    
+    print(R_number)
+    
+int_Roman(3549)
